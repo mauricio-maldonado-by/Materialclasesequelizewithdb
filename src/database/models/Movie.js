@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias='Movie';
+    let alias='Movies';
 
     let config = {
         tableName: 'movies',

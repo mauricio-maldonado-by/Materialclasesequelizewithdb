@@ -4,7 +4,7 @@ const genresController = {
     list: (req, res) => {
         db.Genres.findAll()
         .then((genres) => {
-            res.sender('genresList', {genres})
+            res.render('genresList', {genres})
         })
     },
     detail: (req, res) => {

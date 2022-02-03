@@ -1,4 +1,3 @@
-const res = require('express/lib/response');
 const db = require('../database/models');
 
 const moviesController = {
@@ -11,7 +10,7 @@ const moviesController = {
     detail: (req, res) => {
         db.Movies.findByPk(req.params.id)
         .then((movie) => {
-            res.render('moviesMovies', {movie})
+            res.render('moviesDetail', {movie})
         })
     },
     new: (req, res) => {
@@ -39,7 +38,7 @@ const moviesController = {
         }
         )
         .then((movies) => {
-            res.sender('recommendedMovies', {movies})
+            res.render('recommendedMovies', {movies})
         })
     }
 }
